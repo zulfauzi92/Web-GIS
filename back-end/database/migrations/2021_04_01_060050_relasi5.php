@@ -136,7 +136,7 @@ class Relasi5 extends Migration
 
         DB::table('category_price')->insert(
             array(
-                'kos_id' => 1,
+                'kos_id' => 2,
                 'name' => 'Per bulan',
                 'price' => 540000
             )
@@ -144,36 +144,36 @@ class Relasi5 extends Migration
 
         DB::table('my_office')->insert(
             array(
-                'kos_id' => 1,
-                'owner_name' => 'Pak Turi/darmini'
+                'kos_id' => 2,
+                'owner_name' => 'Achmada Fiqri A Rasyad'
             )
         );
 
         DB::table('galleries')->insert(
             array(
-                'kos_id' => 1,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-001.jpg'
+                'kos_id' => 2,
+                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-001.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
-                'kos_id' => 1,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-002.jpg'
+                'kos_id' => 2,
+                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-002.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
-                'kos_id' => 1,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-003.jpg'
+                'kos_id' => 2,
+                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-003.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
-                'kos_id' => 1,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-004.jpg'
+                'kos_id' => 2,
+                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-004.jpg'
             )
         );
 
