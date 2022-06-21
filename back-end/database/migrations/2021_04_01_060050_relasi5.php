@@ -70,28 +70,28 @@ class Relasi5 extends Migration
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 1,
-                'filename' => 'https://drive.google.com/file/d/1urnDhw8wEPzgh3BSrIJySpoVv65E30K0/view'
+                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-001.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 1,
-                'filename' => 'https://drive.google.com/file/d/16datI3gQkxKsX8SzjntB6oaeMH4rC7Bu/view'
+                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-002.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 1,
-                'filename' => 'https://drive.google.com/file/d/1spcodqVqGAxuREVjxpluFwXTmTuzuVeN/view'
+                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-003.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 1,
-                'filename' => 'https://drive.google.com/file/d/1T1FT63QlRX1b2nwBLKEPYH96ocbuLmsD/view'
+                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-004.jpg'
             )
         );
 
