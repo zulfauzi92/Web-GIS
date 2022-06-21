@@ -76,7 +76,8 @@ Response
       "latitude": 7.290544,
       "longitude": 112.782115,
       "kos_type": "Kos Putra",
-      "filename": "https://drive.google.com/file/d/1urnDhw8wEPzgh3BSrIJySpoVv65E30K0/view"
+      "filename": "https://drive.google.com/file/d/1urnDhw8wEPzgh3BSrIJySpoVv65E30K0/view",
+      "distance": 123.0
     }, 
     {
       "id": 1,
@@ -86,7 +87,8 @@ Response
       "latitude": 7.290544,
       "longitude": 112.782115,
       "kos_type": "Kos Putra",
-      "filename": "https://drive.google.com/file/d/1urnDhw8wEPzgh3BSrIJySpoVv65E30K0/view"
+      "filename": "https://drive.google.com/file/d/1urnDhw8wEPzgh3BSrIJySpoVv65E30K0/view",
+      "distance": 123.0
     },
   ]
 }
@@ -107,6 +109,7 @@ Response
     "latitude": 7.290544,
     "longitude": 112.782115,
     "kos_type": "Kos Putra",
+    "distance": 123.0,
     "gallery": [
       {
         "filename": "https://drive.google.com/file/d/1urnDhw8wEPzgh3BSrIJySpoVv65E30K0/view"
