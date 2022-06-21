@@ -13,14 +13,14 @@ class CommonRegulasi extends Migration
      */
     public function up()
     {
-        Schema::create('common_regulations', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('room_id');
-            $table->integer('user_id');
-            $table->string('name', 255);
-            $table->timestamps();
+        // Schema::create('common_regulations', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->integer('room_id');
+        //     $table->integer('user_id');
+        //     $table->string('name', 255);
+        //     $table->timestamps();
             
-        });
+        // });
     }
 
     /**

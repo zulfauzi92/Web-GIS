@@ -10,39 +10,39 @@ use Tymon\JWTAuth\Contracts\JWTSubject;
 
 class Users extends Authenticatable implements JWTSubject
 {
-    use HasFactory, Notifiable;
+    // use HasFactory, Notifiable;
 
-    protected $table = "users";
-    public $timestamps = true;
+    // protected $table = "users";
+    // public $timestamps = true;
 
-    protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'image',
-        'address',
-        'phone_number',
-        'role',
-        'created_at',
-    ];
+    // protected $fillable = [
+    //     'name',
+    //     'email',
+    //     'password',
+    //     'image',
+    //     'address',
+    //     'phone_number',
+    //     'role',
+    //     'created_at',
+    // ];
 
-    protected $hidden = [
-        'password',
-        'remember_token',
-    ];
+    // protected $hidden = [
+    //     'password',
+    //     'remember_token',
+    // ];
 
-    protected $casts = [
-        'email_verified_at' => 'datetime',
-    ];
+    // protected $casts = [
+    //     'email_verified_at' => 'datetime',
+    // ];
 
-    public function getJWTIdentifier()
-    {
-        return $this->getKey();
-    }
-    public function getJWTCustomClaims()
-    {
-        return [];
-    }
+    // public function getJWTIdentifier()
+    // {
+    //     return $this->getKey();
+    // }
+    // public function getJWTCustomClaims()
+    // {
+    //     return [];
+    // }
 
     // public function listLocations()
     // {

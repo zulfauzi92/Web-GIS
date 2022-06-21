@@ -13,15 +13,15 @@ class OperationalTimes extends Migration
      */
     public function up()
     {
-        Schema::create('operational_times', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('room_id');
-            $table->integer('user_id');
-            $table->string('day');
-            $table->time('open_times');
-            $table->time('close_times');
-            $table->timestamps();
-        });
+        // Schema::create('operational_times', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->integer('room_id');
+        //     $table->integer('user_id');
+        //     $table->string('day');
+        //     $table->time('open_times');
+        //     $table->time('close_times');
+        //     $table->timestamps();
+        // });
     }
 
     /**

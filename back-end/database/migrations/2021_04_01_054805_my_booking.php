@@ -13,18 +13,18 @@ class MyBooking extends Migration
      */
     public function up()
     {
-        Schema::create('my_booking', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('room_id');
-            $table->integer('category_price_id');
-            $table->date('starting_date');
-            $table->time('starting_time');
-            $table->integer('quantity');
-            $table->double('total_price');
-            $table->string('status');
-            $table->timestamps();
-        });
+        // Schema::create('my_booking', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->integer('user_id');
+        //     $table->integer('room_id');
+        //     $table->integer('category_price_id');
+        //     $table->date('starting_date');
+        //     $table->time('starting_time');
+        //     $table->integer('quantity');
+        //     $table->double('total_price');
+        //     $table->string('status');
+        //     $table->timestamps();
+        // });
         
     }
 

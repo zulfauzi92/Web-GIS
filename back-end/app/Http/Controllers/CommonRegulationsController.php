@@ -13,112 +13,112 @@ use Validator;
 class CommonRegulationsController extends Controller
 {
 
-    public function index() {
+    // public function index() {
 
-        $user = JWTAuth::parseToken()->authenticate();
+    //     $user = JWTAuth::parseToken()->authenticate();
 
-        $common_regulations = DB::table('common_regulations')
-        ->where('user_id', '=', $user->id)
-        ->get();
+    //     $common_regulations = DB::table('common_regulations')
+    //     ->where('user_id', '=', $user->id)
+    //     ->get();
 
-        $common_regulations_temp = DB::table('common_regulations')
-        ->where('user_id', '=', $user->id)
-        ->first();
+    //     $common_regulations_temp = DB::table('common_regulations')
+    //     ->where('user_id', '=', $user->id)
+    //     ->first();
 
-        if (empty($common_regulations_temp)) {
-            return response()->json([ 'status' => "Data doesn't exist"]); 
-        }
+    //     if (empty($common_regulations_temp)) {
+    //         return response()->json([ 'status' => "Data doesn't exist"]); 
+    //     }
 
-        $status = "Data exist";
+    //     $status = "Data exist";
 
-        return response()->json(compact('common_regulations', 'status'));
+    //     return response()->json(compact('common_regulations', 'status'));
 
-    }
+    // }
 
-    public function store(Request $request) {
+    // public function store(Request $request) {
 
-        $user = JWTAuth::parseToken()->authenticate();
+    //     $user = JWTAuth::parseToken()->authenticate();
 
-        $this->validate($request,[
-            'room_id' => 'required',
-            'name' => 'required|string|max:255'
-        ]);
+    //     $this->validate($request,[
+    //         'room_id' => 'required',
+    //         'name' => 'required|string|max:255'
+    //     ]);
 
-        try {
+    //     try {
 
-            $common_regulations = CommonRegulations::create([
-                'room_id' => $request->get('room_id'),
-                'user_id' => $user->id,
-                'name' => $request->get('name')
-            ]);
-        }
-        catch(\Exception $e){
-            return response()->json(['status'=>$e->getMessage()]);
-        }
+    //         $common_regulations = CommonRegulations::create([
+    //             'room_id' => $request->get('room_id'),
+    //             'user_id' => $user->id,
+    //             'name' => $request->get('name')
+    //         ]);
+    //     }
+    //     catch(\Exception $e){
+    //         return response()->json(['status'=>$e->getMessage()]);
+    //     }
 
-        $status = "Data created successfully";
+    //     $status = "Data created successfully";
         
-        return response()->json(compact('common_regulations', 'status'));
+    //     return response()->json(compact('common_regulations', 'status'));
 
-    }
+    // }
 
-    public function update(Request $request, $id)
-    {
-        $user = JWTAuth::parseToken()->authenticate();
+    // public function update(Request $request, $id)
+    // {
+    //     $user = JWTAuth::parseToken()->authenticate();
 
-        $common_regulations = DB::table('common_regulations')
-        ->where('user_id', '=', $user->id)
-        ->where('id', '=', $id)
-        ->first();
+    //     $common_regulations = DB::table('common_regulations')
+    //     ->where('user_id', '=', $user->id)
+    //     ->where('id', '=', $id)
+    //     ->first();
 
-        if(empty($common_regulations)){
+    //     if(empty($common_regulations)){
 
-            return response()->json([ 'status' => "Data doesn't exist"]); 
-        }
+    //         return response()->json([ 'status' => "Data doesn't exist"]); 
+    //     }
 
-        if($request->get('name')==NULL){
+    //     if($request->get('name')==NULL){
 
-            $name = $common_regulations->name;
+    //         $name = $common_regulations->name;
 
-        } else{
+    //     } else{
 
-            $validator = Validator::make($request->all(), [
-                'name' => 'required|string|max:255'
-            ]);
+    //         $validator = Validator::make($request->all(), [
+    //             'name' => 'required|string|max:255'
+    //         ]);
 
-            if($validator->fails()){
-                return response()->json(['status' => $validator->errors()->toJson()], 400);
-            }
-            $name = $request->get('name');
+    //         if($validator->fails()){
+    //             return response()->json(['status' => $validator->errors()->toJson()], 400);
+    //         }
+    //         $name = $request->get('name');
 
-        }
-        $room_id = $common_regulations->room_id;
-        $common_regulations_temp = CommonRegulations::find($common_regulations->id);
-        $common_regulations_temp->update([
-            'name' => $name,
-        ]);
+    //     }
+    //     $room_id = $common_regulations->room_id;
+    //     $common_regulations_temp = CommonRegulations::find($common_regulations->id);
+    //     $common_regulations_temp->update([
+    //         'name' => $name,
+    //     ]);
 
-        return response()->json([ 'status' => "Update successfully"]); 
-    }
+    //     return response()->json([ 'status' => "Update successfully"]); 
+    // }
 
-    public function destroy($id) {
+    // public function destroy($id) {
 
-        $user = JWTAuth::parseToken()->authenticate();
+    //     $user = JWTAuth::parseToken()->authenticate();
 
-        $common_regulations = DB::table('common_regulations')
-        ->where('user_id', '=', $user->id)
-        ->where('id', '=', $id)
-        ->first();
+    //     $common_regulations = DB::table('common_regulations')
+    //     ->where('user_id', '=', $user->id)
+    //     ->where('id', '=', $id)
+    //     ->first();
 
-        if(empty($common_regulations)){
+    //     if(empty($common_regulations)){
 
-            return response()->json([ 'status' => "Data doesn't exist"]); 
-        }
+    //         return response()->json([ 'status' => "Data doesn't exist"]); 
+    //     }
 
-        $common_regulations->delete();
+    //     $common_regulations->delete();
 
-        return response()->json([ 'status' => "Delete successfully"]); 
+    //     return response()->json([ 'status' => "Delete successfully"]); 
 
-    }
+    // }
 
 }

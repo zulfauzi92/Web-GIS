@@ -15,7 +15,7 @@ class CategoryPrice extends Migration
     {
         Schema::create('category_price', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
+            $table->integer('kos_id');
             $table->string('name');
             $table->double('price');
             $table->timestamps();

@@ -13,15 +13,15 @@ class CreateRoomTypesTable extends Migration
      */
     public function up()
     {
-        Schema::create('room_types', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('room_id');
-            $table->integer('user_id');
-            $table->string('name');
-            $table->integer('capacity');
-            $table->string('layout');
-            $table->timestamps();
-        });
+        // Schema::create('room_types', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->integer('room_id');
+        //     $table->integer('user_id');
+        //     $table->string('name');
+        //     $table->integer('capacity');
+        //     $table->string('layout');
+        //     $table->timestamps();
+        // });
     }
 
     /**

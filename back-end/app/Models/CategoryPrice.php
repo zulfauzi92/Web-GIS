@@ -11,7 +11,7 @@ class CategoryPrice extends Model
     
     protected $table = 'category_price';
     protected $fillable = [
-        'user_id',
+        'kos_id',
         'name',
         'price'
     ];

@@ -13,15 +13,15 @@ class Fooddrinks extends Migration
      */
     public function up()
     {
-        Schema::create('food_drinks', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('room_id');
-            $table->integer('user_id');
-            $table->string('name', 255);
-            $table->string('description', 255);
-            $table->double('price');
-            $table->timestamps();
-        });
+        // Schema::create('food_drinks', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->integer('room_id');
+        //     $table->integer('user_id');
+        //     $table->string('name', 255);
+        //     $table->string('description', 255);
+        //     $table->double('price');
+        //     $table->timestamps();
+        // });
     }
 
     /**

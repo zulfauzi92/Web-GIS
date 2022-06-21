@@ -9,14 +9,14 @@ class Room extends Model
 {
     use HasFactory;
 
-    protected $table = 'rooms';
+    protected $table = 'kos';
     protected $fillable = [
-        'user_id',
         'name',
         'description',
         'address',
         'latitude',
-        'longitude'
+        'longitude',
+        'kos_type'
     ];
     public $timestamps = true;
 }

@@ -7,13 +7,13 @@ use Illuminate\Database\Eloquent\Model;
 
 class RoomCategoryPrice extends Model
 {
-    use HasFactory;
+    // use HasFactory;
     
-    protected $table = 'room_category_price';
-    protected $fillable = [
-        'room_id',
-        'user_id',
-        'category_price_id'
-    ];
-    public $timestamps = true;
+    // protected $table = 'room_category_price';
+    // protected $fillable = [
+    //     'room_id',
+    //     'user_id',
+    //     'category_price_id'
+    // ];
+    // public $timestamps = true;
 }

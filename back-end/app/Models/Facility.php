@@ -11,10 +11,8 @@ class Facility extends Model
 
     protected $table = 'facilities';
     protected $fillable = [
-        'room_id',
-        'user_id',
+        'kos_id',
         'name',
-        'status'
     ];
     public $timestamps = true;
 }

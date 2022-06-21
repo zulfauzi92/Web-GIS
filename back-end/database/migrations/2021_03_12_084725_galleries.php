@@ -15,8 +15,8 @@ class Galleries extends Migration
     {
         Schema::create('galleries', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('room_id');
-            $table->integer('user_id');
+            $table->integer('kos_id');
+            // $table->integer('user_id');
             $table->string('filename', 255);
             $table->timestamps();
             

@@ -15,150 +15,148 @@ class FacilityController extends Controller
     
     public function index()
     {
-        $user = JWTAuth::parseToken()->authenticate();
+        // $user = JWTAuth::parseToken()->authenticate();
 
         $facilities = DB::table('facilities')
-        ->where('user_id', '=', $user->id)
         ->get();
 
         $facilities_temp = DB::table('facilities')
-        ->where('user_id', '=', $user->id)
         ->first();
 
         if (empty($facilities_temp)) {
-            return response()->json([ 'status' => "Data doesn't exist"]); 
+            $status = "Data does'nt exist"; 
+        } else {
+            $status = "Data exist";
         }
-
-        $status = "Data exist";
 
         return response()->json(compact('facilities', 'status'));
     }
 
     
-    public function store(Request $request)
-    {
-        $user = JWTAuth::parseToken()->authenticate();
+    // public function store(Request $request)
+    // {
+    //     $user = JWTAuth::parseToken()->authenticate();
 
-        $this->validate($request,[
-            'room_id' => 'required',
-            'name' => 'required',
-            'status' => 'required'
-        ]);
+    //     $this->validate($request,[
+    //         'room_id' => 'required',
+    //         'name' => 'required',
+    //         'status' => 'required'
+    //     ]);
 
-        try{
-            $facility = Facility::create([
-                'room_id' => $request->get('room_id'),
-                'user_id' => $user->id,
-                'name' => $request->get('name'),
-                'status' => $request->get('status')
-            ]);
+    //     try{
+    //         $facility = Facility::create([
+    //             'room_id' => $request->get('room_id'),
+    //             'user_id' => $user->id,
+    //             'name' => $request->get('name'),
+    //             'status' => $request->get('status')
+    //         ]);
 
-        }
-        catch(\Exception $e){
-            return response()->json(['status'=>$e->getMessage()]);
-        }
+    //     }
+    //     catch(\Exception $e){
+    //         return response()->json(['status'=>$e->getMessage()]);
+    //     }
 
-        $status = "Data created successfully";
+    //     $status = "Data created successfully";
         
-        return response()->json(compact('facility', 'status'));
-    }
+    //     return response()->json(compact('facility', 'status'));
+    // }
 
     
-    public function show($id)
-    {
-        $user = JWTAuth::parseToken()->authenticate();
+    // public function show($id)
+    // {
+    //     $user = JWTAuth::parseToken()->authenticate();
 
-        $facility = DB::table('facilities')
-        ->where('user_id', '=', $user->id)
-        ->where('id', '=', $id)
-        ->first();
+    //     $facility = DB::table('facilities')
+    //     ->where('user_id', '=', $user->id)
+    //     ->where('id', '=', $id)
+    //     ->first();
         
-        if (empty($facility)) {
-            return response()->json([ 'status' => "Data Not Found"]); 
-        } else {
-            return response()->json(compact('facility'));
-        }
-    }
+    //     if (empty($facility)) {
+    //         return response()->json([ 'status' => "Data Not Found"]); 
+    //     } else {
+    //         return response()->json(compact('facility'));
+    //     }
+    // }
 
     
-    public function update(Request $request, $id)
-    {
-        $user = JWTAuth::parseToken()->authenticate();
+    // public function update(Request $request, $id)
+    // {
+    //     $user = JWTAuth::parseToken()->authenticate();
 
-        $facility = DB::table('facilities')
-        ->where('user_id', '=', $user->id)
-        ->where('id', '=', $id)
-        ->first();
+    //     $facility = DB::table('facilities')
+    //     ->where('user_id', '=', $user->id)
+    //     ->where('id', '=', $id)
+    //     ->first();
 
-        if (empty($facility)) {
+    //     if (empty($facility)) {
             
-            return response()->json([ 'status' => "Data doesn't exist"]); 
+    //         return response()->json([ 'status' => "Data doesn't exist"]); 
 
-        } 
+    //     } 
         
-        if($request->get('name')==NULL){
+    //     if($request->get('name')==NULL){
 
-            $name = $facility->name;
+    //         $name = $facility->name;
 
-        } else{
+    //     } else{
 
-            $validator = Validator::make($request->all(), [
-                'name' => 'required|string|max:255'
-            ]);
+    //         $validator = Validator::make($request->all(), [
+    //             'name' => 'required|string|max:255'
+    //         ]);
 
-            if($validator->fails()){
-                return response()->json(['status' => $validator->errors()->toJson()], 400);
-            }
-            $name = $request->get('name');
+    //         if($validator->fails()){
+    //             return response()->json(['status' => $validator->errors()->toJson()], 400);
+    //         }
+    //         $name = $request->get('name');
 
-        }
+    //     }
 
-        if($request->get('status')==NULL){
+    //     if($request->get('status')==NULL){
 
-            $status = $facility->status;
+    //         $status = $facility->status;
 
-        } else{
+    //     } else{
 
-            $validator = Validator::make($request->all(), [
-                'status' => 'required|string|max:255'
-            ]);
+    //         $validator = Validator::make($request->all(), [
+    //             'status' => 'required|string|max:255'
+    //         ]);
 
-            if($validator->fails()){
-                return response()->json(['status' => $validator->errors()->toJson()], 400);
-            }
-            $status = $request->get('status');
+    //         if($validator->fails()){
+    //             return response()->json(['status' => $validator->errors()->toJson()], 400);
+    //         }
+    //         $status = $request->get('status');
 
-        }
+    //     }
         
-        $facility_temp = Facility::find($facility->id);
+    //     $facility_temp = Facility::find($facility->id);
 
-        $facility_temp->update([
-            'name' => $name,
-            'status' => $status
-        ]);
+    //     $facility_temp->update([
+    //         'name' => $name,
+    //         'status' => $status
+    //     ]);
 
-        return response()->json([ 'status' => "Update successfully"]);
+    //     return response()->json([ 'status' => "Update successfully"]);
         
-    }
+    // }
 
     
-    public function destroy($id)
-    {
-        $user = JWTAuth::parseToken()->authenticate();
+    // public function destroy($id)
+    // {
+    //     $user = JWTAuth::parseToken()->authenticate();
 
-        $facility = DB::table('facilities')
-        ->where('user_id', '=', $user->id)
-        ->where('id', '=', $id)
-        ->first();
+    //     $facility = DB::table('facilities')
+    //     ->where('user_id', '=', $user->id)
+    //     ->where('id', '=', $id)
+    //     ->first();
 
-        if (empty($facility)) {
+    //     if (empty($facility)) {
 
-            return response()->json([ 'status' => "Data doesn't exist"]);
-        }
+    //         return response()->json([ 'status' => "Data doesn't exist"]);
+    //     }
 
-        $facility->delete();
+    //     $facility->delete();
 
-        return response()->json([ 'status' => "Data Successfully Deleted"]);
+    //     return response()->json([ 'status' => "Data Successfully Deleted"]);
         
-    }
+    // }
 }

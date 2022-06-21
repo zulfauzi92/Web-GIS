@@ -15,8 +15,10 @@ class MyOffice extends Migration
     {
         Schema::create('my_office', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('user_id');
-            $table->integer('room_id');
+            $table->integer('kos_id');
+            $table->string('owner_name');
+            // $table->string('phone_number');
+            // $table->string('email');
             $table->timestamps();
         });
     }

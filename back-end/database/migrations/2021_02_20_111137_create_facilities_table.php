@@ -15,10 +15,10 @@ class CreateFacilitiesTable extends Migration
     {
         Schema::create('facilities', function (Blueprint $table) {
             $table->increments('id');
-            $table->integer('room_id');
-            $table->integer('user_id');
+            $table->integer('kos_id');
+            // $table->integer('user_id');
             $table->string('name');
-            $table->string('status');
+            // $table->string('status');
             $table->timestamps();
         });
     }

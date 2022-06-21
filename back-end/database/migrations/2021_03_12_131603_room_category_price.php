@@ -13,13 +13,13 @@ class RoomCategoryPrice extends Migration
      */
     public function up()
     {
-        Schema::create('room_category_price', function (Blueprint $table) {
-            $table->increments('id');
-            $table->integer('room_id');
-            $table->integer('user_id');
-            $table->integer('category_price_id');
-            $table->timestamps();
-        });
+        // Schema::create('room_category_price', function (Blueprint $table) {
+        //     $table->increments('id');
+        //     $table->integer('room_id');
+        //     $table->integer('user_id');
+        //     $table->integer('category_price_id');
+        //     $table->timestamps();
+        // });
     }
 
     /**

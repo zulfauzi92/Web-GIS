@@ -11,8 +11,11 @@ class MyOffice extends Model
     
     protected $table = 'my_office';
     protected $fillable = [
-        'user_id',
-        'room_id'
+        'kos_id',
+        'owner_name',
+        // 'phone_number',
+        // 'email',
+
     ];
     public $timestamps = true;
 }
