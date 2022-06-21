@@ -76,24 +76,24 @@ Response
       "id": 1,
       "name": "Kost Deles Sukolilo Surabaya 796534DS",
       "description": "lokasi kos: masuk gang sebelah santana seafood. lanjut cari gang mawar dan masuk ke timur. kemudian tanya kos milik H. Rouf almarhum. atau tanya                       tempas kos Pak Turi/darmini. Listrik: biaya perbulan sudah termasuk listrik standard. yaitu: untuk cas hp/laptop, kipas angin, lampu. alat masak                       listrik dikenakan biaya tambahan 40rb/bln Fasilitas: kamar mandi luar parkiran motor kasur lemari pakaian meja belajar",
-      "address": "Kost Deles Sukolilo Surabaya beralamat di: jln Deles 3 gang mawar",
-      "latitude": -7.290544,
-      "longitude": 112.782115,
-      "kos_type": "Kos Putra",
-      "distance": 2.97945619717851,
-      "filename": "https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-001.jpg"
-    }, 
-    {
-      "id": 1,
-      "name": "Kost Deles Sukolilo Surabaya 796534DS",
-      "description": "lokasi kos: masuk gang sebelah santana seafood. lanjut cari gang mawar dan masuk ke timur. kemudian tanya kos milik H. Rouf almarhum. atau tanya                       tempas kos Pak Turi/darmini. Listrik: biaya perbulan sudah termasuk listrik standard. yaitu: untuk cas hp/laptop, kipas angin, lampu. alat masak                       listrik dikenakan biaya tambahan 40rb/bln Fasilitas: kamar mandi luar parkiran motor kasur lemari pakaian meja belajar",
-      "address": "Kost Deles Sukolilo Surabaya beralamat di: jln Deles 3 gang mawar",
+      "address": "Jln Deles 3 gang mawar",
       "latitude": -7.290544,
       "longitude": 112.782115,
       "kos_type": "Kos Putra",
       "distance": 2.97945619717851,
       "filename": "https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-001.jpg"
     },
+    {
+      "id": 2,
+      "name": "Kost Cak Husin Tipe B Keputih Sukolilo Surabaya RMZ 159CK",
+      "description": "Tamu dilarang menginap",
+      "address": "Jl. Arif Rahman Hakim Keputih No.59 Sukolilo Surabaya (Dekat Depo Air Isi Ulang Biru Keputih)",
+      "latitude": -7.2899042,
+      "longitude": 112.7966067,
+      "kos_type": "Kos Putri",
+      "distance": 2.849065184268282,
+      "filename": "https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-001.jpg"
+    }
   ]
 }
 ```
@@ -108,7 +108,7 @@ Response
   "detail_kos": {
     "id": 1,
     "name": "Kost Deles Sukolilo Surabaya 796534DS",
-    "address": "Kost Deles Sukolilo Surabaya beralamat di: jln Deles 3 gang mawar",
+    "address": "Jln Deles 3 gang mawar",
     "description": "lokasi kos: masuk gang sebelah santana seafood. lanjut cari gang mawar dan masuk ke timur. kemudian tanya kos milik H. Rouf almarhum. atau tanya tempas kos Pak Turi/darmini. Listrik: biaya perbulan sudah termasuk listrik standard. yaitu: untuk cas hp/laptop, kipas angin, lampu. alat masak listrik dikenakan biaya tambahan 40rb/bln Fasilitas: kamar mandi luar parkiran motor kasur lemari pakaian meja belajar",
     "latitude": -7.290544,
     "longitude": 112.782115,
