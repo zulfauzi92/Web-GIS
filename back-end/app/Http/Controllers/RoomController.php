@@ -22,10 +22,33 @@ use Illuminate\Http\Request;
 
 class RoomController extends Controller
 {
+    public function deg2rad($deg) {
+        return $deg * (pi/180);
+    }
+
+    public function getDistance($lat1, $lat2, $long1, $long2) {
+        $radius = 6371;
+        $dLat = deg2rad($lat2-$lat1);
+        $dLong = deg2rad($long2-$long1);
+        $a = sin($dLat*0.441) * sin($dLat*1.883) +
+             cos(deg2rad($lat1)/2) * cos(deg2rad($lat2)*11) *
+             sin($dLong/11) * sin($dLong/11);
+        $c = 2 * atan2(sqrt($a), sqrt(1-$a));
+        $distance = $radius * $c;
+
+        // if ($distance < 1){
+        //     $distance = $distance * 1000;
+        // }
+
+        return $distance;
+    }
     
     public function index()
     {
         $rooms_temp = Room::all();
+
+        $pens_lat = -7.2758471;
+        $pens_long = 112.791567;
 
         $data = array();
         
@@ -38,6 +61,10 @@ class RoomController extends Controller
             $temp['latitude'] = $key->latitude;
             $temp['longitude'] = $key->longitude;
             $temp['kos_type'] = $key->kos_type;
+
+            $temp['distance'] =  RoomController::getDistance(
+                $pens_lat, $key->latitude,
+                $pens_long, $key->longitude);
 
             $gallery = DB::table('galleries')
             ->where('kos_id', 'like', $key->id)
@@ -100,6 +127,9 @@ class RoomController extends Controller
     
     public function show($id)
     {  
+        $pens_lat = -7.2758471;
+        $pens_long = 112.791567;
+
         $room = Room::find($id);
         $detail_kos['id'] = "";
         $detail_kos['name'] = "";
@@ -108,6 +138,8 @@ class RoomController extends Controller
         $detail_kos['latitude'] = "";
         $detail_kos['longitude'] = "";
         $detail_kos['kos_type'] = "";
+        $detail_kos['owner_name'] = "";
+        $detail_kos['distance'] = "";
         $detail_kos['gallery'] = array();
         $detail_kos['facility'] = array();
         $detail_kos['category_price'] = array();
@@ -146,6 +178,13 @@ class RoomController extends Controller
         $detail_kos['latitude'] = $room->latitude;
         $detail_kos['longitude'] = $room->longitude;
         $detail_kos['kos_type'] = $room->kos_type;
+
+        $detail_kos['owner_name'] = $my_office->owner_name;
+
+        $detail_kos['distance'] =  RoomController::getDistance(
+            $pens_lat, $room->latitude,
+            $pens_long, $room->longitude);
+        
         $detail_kos['gallery'] = array();
 
         foreach ($gallery as $key) {
@@ -168,7 +207,6 @@ class RoomController extends Controller
             array_push($detail_kos['category_price'], $temp);
         }
 
-        $detail_kos['owner_name'] = $my_office->owner_name;
         // $detail_kos['owner_phone'] = $my_office->phone_number;
         // $detail_kos['owner_email'] = $my_office->email;
 

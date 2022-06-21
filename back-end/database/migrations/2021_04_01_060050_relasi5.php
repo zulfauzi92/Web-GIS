@@ -18,7 +18,7 @@ class Relasi5 extends Migration
                 'name' => 'Kost Deles Sukolilo Surabaya 796534DS',
                 'address' => 'Kost Deles Sukolilo Surabaya beralamat di: jln Deles 3 gang mawar',
                 'description' => 'lokasi kos: masuk gang sebelah santana seafood. lanjut cari gang mawar dan masuk ke timur. kemudian tanya kos milik H. Rouf almarhum. atau tanya tempas kos Pak Turi/darmini. Listrik: biaya perbulan sudah termasuk listrik standard. yaitu: untuk cas hp/laptop, kipas angin, lampu. alat masak listrik dikenakan biaya tambahan 40rb/bln Fasilitas: kamar mandi luar parkiran motor kasur lemari pakaian meja belajar',
-                'latitude' => 7.290544,
+                'latitude' => -7.290544,
                 'longitude' => 112.782115,
                 'kos_type' => 'Kos Putra'
             )
