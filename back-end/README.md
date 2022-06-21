@@ -81,7 +81,7 @@ Response
       "longitude": 112.782115,
       "kos_type": "Kos Putra",
       "distance": 2.97945619717851,
-      "filename": "https://drive.google.com/file/d/1urnDhw8wEPzgh3BSrIJySpoVv65E30K0/view"
+      "filename": "https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-001.jpg"
     }, 
     {
       "id": 1,
@@ -115,7 +115,7 @@ Response
     "kos_type": "Kos Putra",
     "owner_name": "Pak Turi/darmini",
     "distance": 2.97945619717851,
-    gallery": [
+    "gallery": [
       {
         "filename": "https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-001.jpg"
       },
