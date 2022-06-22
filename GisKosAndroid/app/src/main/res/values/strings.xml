@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Gis Kos Android</string>
+    <string name="maps_title">Lokasi Kos</string>
+    <string name="kosdetail_vp_gallery_description">Galeri Foto Kos</string>
+</resources>
