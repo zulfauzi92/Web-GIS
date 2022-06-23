@@ -70,28 +70,28 @@ class Relasi5 extends Migration
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 1,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-001.jpg'
+                'filename' => 'https://raw.githubusercontent.com/zulfauzi92/Web-GIS/main/kos%20image/kos1/kos1-001.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 1,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-002.jpg'
+                'filename' => 'https://raw.githubusercontent.com/zulfauzi92/Web-GIS/main/kos%20image/kos1/kos1-002.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 1,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-003.jpg'
+                'filename' => 'https://raw.githubusercontent.com/zulfauzi92/Web-GIS/main/kos%20image/kos1/kos1-003.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 1,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos1/kos1-004.jpg'
+                'filename' => 'https://raw.githubusercontent.com/zulfauzi92/Web-GIS/main/kos%20image/kos1/kos1-004.jpg'
             )
         );
 
@@ -152,28 +152,28 @@ class Relasi5 extends Migration
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 2,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-001.jpg'
+                'filename' => 'https://raw.githubusercontent.com/zulfauzi92/Web-GIS/main/kos%20image/kos2/kos2-001.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 2,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-002.jpg'
+                'filename' => 'https://raw.githubusercontent.com/zulfauzi92/Web-GIS/main/kos%20image/kos2/kos2-002.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 2,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-003.jpg'
+                'filename' => 'https://raw.githubusercontent.com/zulfauzi92/Web-GIS/main/kos%20image/kos2/kos2-003.jpg'
             )
         );
 
         DB::table('galleries')->insert(
             array(
                 'kos_id' => 2,
-                'filename' => 'https://github.com/zulfauzi92/Web-GIS/blob/main/kos%20image/kos2/kos2-004.jpg'
+                'filename' => 'https://raw.githubusercontent.com/zulfauzi92/Web-GIS/main/kos%20image/kos2/kos2-004.jpg'
             )
         );
 

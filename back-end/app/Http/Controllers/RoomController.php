@@ -47,8 +47,8 @@ class RoomController extends Controller
     {
         $rooms_temp = Room::all();
 
-        $pens_lat = -7.2758471;
-        $pens_long = 112.791567;
+        $pens_lat = -7.277810;
+        $pens_long = 112.795517;
 
         $data = array();
         
