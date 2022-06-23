@@ -1,6 +1,5 @@
 package com.example.giskosandroid.modules.maps;
 
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -24,22 +23,17 @@ import org.osmdroid.views.CustomZoomButtonsController;
 import org.osmdroid.views.MapController;
 import org.osmdroid.views.MapView;
 import org.osmdroid.views.overlay.Marker;
-import org.osmdroid.views.overlay.OverlayItem;
 import org.osmdroid.views.overlay.infowindow.InfoWindow;
-import org.osmdroid.views.overlay.infowindow.MarkerInfoWindow;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class MapsFragment extends BaseFragment<MapsActivity, MapsContract.Presenter>
         implements MapsContract.View {
     private MapView mvMap = null;
     private ProgressBar pbLoading;
-    List<Kos> modelMainList = new ArrayList<>();
-    List<OverlayItem> overlayItem = new ArrayList<>();
-    MapController mapController;
+    private MapController mapController;
 
-    public MapsFragment() {}
+    public MapsFragment() { }
 
     public MapView getMvMap() {
         return mvMap;
@@ -109,10 +103,8 @@ public class MapsFragment extends BaseFragment<MapsActivity, MapsContract.Presen
         for (int i = -1; i < kosList.size(); i++) {
             if (i == -1) {
                 GeoPoint pensGeoPoint = new GeoPoint(Constants.PENS_LAT, Constants.PENS_LONG);
-//                overlayItem = new ArrayList<>();
-//                overlayItem.add(new OverlayItem(kosName, kosAddress, kosGeoPoint));
-
                 Marker marker = new Marker(mvMap);
+
                 marker.setPosition(pensGeoPoint);
                 marker.setIcon(
                         ResourcesCompat.getDrawable(getResources(), R.mipmap.ic_pens, null)
@@ -132,17 +124,12 @@ public class MapsFragment extends BaseFragment<MapsActivity, MapsContract.Presen
                 mvMap.invalidate();
             } else {
                 Kos kos = kosList.get(i);
-                String kosName = kos.getName();
-                String kosAddress = kos.getAddress();
                 GeoPoint kosGeoPoint = new GeoPoint(kos.getLatitude(), kos.getLongitude());
-
-                overlayItem = new ArrayList<>();
-                overlayItem.add(new OverlayItem(kosName, kosAddress, kosGeoPoint));
-
                 Marker marker = new Marker(mvMap);
+
                 marker.setPosition(kosGeoPoint);
                 marker.setRelatedObject(kos);
-                marker.setInfoWindow(new KosInfoWindow(mvMap));
+                marker.setInfoWindow(new KosInfoWindow(getActivity(), mvMap));
                 marker.setOnMarkerClickListener(new Marker.OnMarkerClickListener() {
                     @Override
                     public boolean onMarkerClick(Marker marker, MapView mapView) {

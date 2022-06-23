@@ -25,7 +25,7 @@ public class KosDetailInteractor  implements KosDetailContract.Interactor {
                                 } else if (response.detail_kos != null) {
                                     callback.onSuccess(response);
                                 } else {
-                                    callback.onFailure("Failed to fetch kos detail.");
+                                    callback.onFailure("No Data.");
                                 }
                             }
 

@@ -6,6 +6,6 @@ public class Constants {
     public static final double PENS_LAT = -7.277810;
     public static final double PENS_LONG = 112.795517;
 
-//    public static final String EXTRA_TASK_ID = "com.example.to_dolist.TASK_ID";
+    public static final String EXTRA_KOS_ID = "com.example.giskosandroid.KOS_ID";
 }
 
